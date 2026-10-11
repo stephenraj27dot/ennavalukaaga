@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Only You — Our Little Universe</title>
+  
+  <!-- SEO & Social Sharing Meta Tags -->
+  <meta name="description" content="A romantic surprise created with love. In this big world, meeting you made my little world special.">
+  <meta name="theme-color" content="#120B24">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Great Vibes, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Cosmic Canvas for Twinkling Stars & Floating Stardust -->
+  <canvas id="universe-canvas" class="universe-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Audio & Experience Controls -->
+  <aside class="floating-controls" id="floating-controls" aria-label="Audio controls">
+    <button id="music-toggle-btn" class="control-btn music-btn" aria-label="Toggle background music" title="Toggle background music">
+      <span class="music-icon" id="music-icon">🎵</span>
+      <span class="music-waves" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="sr-only">Toggle Music</span>
+    </button>
+  </aside>
+
+  <!-- Journey Progress Indicator for Mobile -->
+  <nav class="journey-dots" id="journey-dots" aria-label="Surprise Journey Navigation">
+    <button class="dot-btn active" data-target="screen-1" aria-label="Screen 1: Welcome"></button>
+    <button class="dot-btn" data-target="screen-2" aria-label="Screen 2: Our Universe"></button>
+    <button class="dot-btn" data-target="screen-3" aria-label="Screen 3: Memory Lane"></button>
+    <button class="dot-btn" data-target="screen-4" aria-label="Screen 4: Things I Love"></button>
+    <button class="dot-btn" data-target="screen-5" aria-label="Screen 5: Voice Message"></button>
+    <button class="dot-btn" data-target="screen-6" aria-label="Screen 6: Love Story Movie"></button>
+    <button class="dot-btn" data-target="screen-7" aria-label="Screen 7: Your Gift Letter"></button>
+  </nav>
+
+  <!-- Main Experience Wrapper -->
+  <main class="experience-wrapper" id="experience-wrapper">
+
+    <!-- ========================================================
+         SCREEN 1: A Secret for You (Welcome Screen)
+         ======================================================== -->
+    <section id="screen-1" class="screen welcome-screen" aria-labelledby="welcome-title">
+      <div class="screen-content welcome-card">
+        <div class="welcome-badge">
+          <span class="sparkle-icon">✨</span>
+          <span class="badge-text">Only for You</span>
+          <span class="sparkle-icon">✨</span>
+        </div>
+
+        <h1 id="welcome-title" class="welcome-heading">
+          Dei, Gundu paiyaa! <span class="heart-pulse">❤️</span>
+        </h1>
+
+        <p class="welcome-teaser" id="welcome-teaser">
+          Unakkaga naan create panna oru chinna surprise. Ready-ah?
+        </p>
+
+        <div class="welcome-cta-group">
+          <button id="start-surprise-btn" class="btn btn-primary btn-glow" type="button">
+            <span class="btn-text">Open Your Surprise</span>
+            <span class="btn-icon">✨</span>
+          </button>
+          <p class="audio-hint">
+            <span class="hint-icon">🎧</span> Best experienced with sound turned on
+          </p>
+        </div>
+
+        <!-- 10:30 PM Magical Golden Hour Banner & Countdown -->
+        <div class="born-time-banner glass-panel" id="born-time-banner">
+          <div class="born-time-header">
+            <span class="born-time-sparkle">✨</span>
+            <span class="born-time-title">Ammu Pirandha Ponneram: <strong>10:30 PM</strong></span>
+            <span class="born-time-sparkle">✨</span>
+          </div>
+          <p class="born-time-countdown" id="born-time-countdown">
+            <span class="clock-icon">⏳</span> 10:30 PM Magic Hour: <strong id="countdown-ticker">Calculating...</strong>
+          </p>
+          <div class="born-time-actions">
+            <button id="trigger-1030-btn" class="born-time-preview-btn" type="button" aria-label="10:30 PM Secret Surprise">
+              <span id="trigger-btn-icon">🔒</span> <span id="trigger-btn-text">Secret Surprise (10:30 PM)</span> <span class="btn-star">✨</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Floating subtle hearts -->
+        <div class="welcome-floating-hearts" aria-hidden="true">
+          <span class="float-heart h1">💖</span>
+          <span class="float-heart h2">🌸</span>
+          <span class="float-heart h3">✨</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 2: Our Little Universe
+         ======================================================== -->
+    <section id="screen-2" class="screen universe-screen" aria-labelledby="universe-heading">
+      <div class="screen-content universe-card">
+        <div class="section-eyebrow">
+          <span class="star-pill">✦ CHAPTER 01 ✦</span>
+        </div>
+
+        <h2 id="universe-heading" class="romantic-script-title">
+          Our Little Universe
+        </h2>
+
+        <div class="universe-quote-box glass-panel">
+          <div class="quote-mark start">“</div>
+          <p class="universe-quote" id="universe-quote-text">
+            In this big world, meeting you made my little world special.
+          </p>
+          <div class="quote-mark end">”</div>
+        </div>
+
+        <p class="universe-subtext" id="universe-subtext">
+          Before you, life was just ordinary days. With you, every single second became a constellation in our quiet little universe.
+        </p>
+
+        <div class="stardust-constellation-graphic" aria-hidden="true">
+          <div class="constellation-core"></div>
+          <div class="orbit-ring ring-1"></div>
+          <div class="orbit-ring ring-2"></div>
+          <span class="orbiting-star star-a">⭐</span>
+          <span class="orbiting-star star-b">💖</span>
+        </div>
+
+        <div class="screen-next-action">
+          <a href="#screen-3" class="scroll-cue-btn" aria-label="Scroll to Memory Lane">
+            <span class="cue-label">Walk Down Memory Lane</span>
+            <span class="chevron-down">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 3: Our Memory Lane (Interactive Timeline)
+         ======================================================== -->
+    <section id="screen-3" class="screen memory-screen" aria-labelledby="memory-lane-heading">
+      <div class="screen-content memory-container">
+        <div class="section-eyebrow">
+          <span class="star-pill">✦ CHAPTER 02 ✦</span>
+        </div>
+
+        <h2 id="memory-lane-heading" class="section-title">
+          Our Memory Lane
+        </h2>
+        <p class="section-subtitle">
+          The little steps, quiet smiles, and priceless moments that brought us here.
+        </p>
+
+        <!-- Dynamic Timeline Container -->
+        <div class="timeline" id="memory-timeline" role="list">
+          <!-- Populated dynamically by script.js from memories.js -->
+        </div>
+
+        <div class="screen-next-action">
+          <a href="#screen-4" class="scroll-cue-btn" aria-label="Scroll to Things I Love">
+            <span class="cue-label">Little Things I Love</span>
+            <span class="chevron-down">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 4: Little Things I Love About You
+         ======================================================== -->
+    <section id="screen-4" class="screen reasons-screen" aria-labelledby="reasons-heading">
+      <div class="screen-content reasons-container">
+        <div class="section-eyebrow">
+          <span class="star-pill">✦ CHAPTER 03 ✦</span>
+        </div>
+
+        <h2 id="reasons-heading" class="section-title">
+          Little Things I Love About You
+        </h2>
+        <p class="section-subtitle">
+          A few of the thousand reasons why my heart chose you, every single day.
+        </p>
+
+        <!-- Dynamic Cards Grid -->
+        <div class="reasons-grid" id="reasons-grid" role="list">
+          <!-- Populated dynamically by script.js from memories.js -->
+        </div>
+
+        <div class="screen-next-action">
+          <a href="#screen-5" class="scroll-cue-btn" aria-label="Scroll to Voice Message">
+            <span class="cue-label">A Message In My Voice</span>
+            <span class="chevron-down">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 5: A Message in My Voice (Audio Player)
+         ======================================================== -->
+    <section id="screen-5" class="screen voice-screen" aria-labelledby="voice-heading">
+      <div class="screen-content voice-container">
+        <div class="section-eyebrow">
+          <span class="star-pill">✦ CHAPTER 04 ✦</span>
+        </div>
+
+        <h2 id="voice-heading" class="section-title">
+          A Message in My Voice
+        </h2>
+        <p class="section-subtitle" id="voice-subtitle">
+          Listen to the words I recorded just for your ears.
+        </p>
+
+        <div class="voice-card glass-panel" id="voice-card">
+          <div style="text-align: center; margin-bottom: 14px;">
+            <div class="singing-dedication-badge">
+              <span>🎤</span> "Nee anniku sing panna sonnala..." <span>❤️</span>
+            </div>
+          </div>
+
+          <!-- Romantic Vinyl Record Player Display -->
+          <div class="vinyl-player-section">
+            <div class="vinyl-disc-wrapper">
+              <div class="vinyl-disc" id="vinyl-disc">
+                <div class="vinyl-grooves"></div>
+                <div class="vinyl-center-label">
+                  <span>💖</span>
+                </div>
+              </div>
+              <div class="floating-musical-notes" id="musical-notes" aria-hidden="true">
+                <span class="musical-note n1">🎵</span>
+                <span class="musical-note n2">🎶</span>
+                <span class="musical-note n3">✨</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="voice-header" style="justify-content: center; text-align: center; margin-bottom: 16px;">
+            <div class="voice-meta">
+              <h3 class="voice-track-title" id="voice-title">Nee anniku sing panna sonnala... 🎤❤️</h3>
+              <p class="voice-track-status" id="voice-status">Tap play to listen to my voice</p>
+            </div>
+          </div>
+
+          <!-- Custom Romantic Waveform Visualizer -->
+          <div class="audio-visualizer" id="audio-visualizer" aria-hidden="true">
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          </div>
+
+          <!-- Progress Bar & Timing -->
+          <div class="player-timeline">
+            <input type="range" id="voice-seek-bar" class="custom-range" min="0" max="100" value="0" aria-label="Voice message progress">
+            <div class="time-readout">
+              <span id="voice-current-time">0:00</span>
+              <span id="voice-duration">0:00</span>
+            </div>
+          </div>
+
+          <!-- Player Controls -->
+          <div class="player-controls">
+            <button id="voice-backward-btn" class="ctrl-btn secondary" type="button" aria-label="Rewind 10 seconds" title="Rewind 10s">
+              ↺ 10s
+            </button>
+            <button id="voice-play-btn" class="ctrl-btn primary-play" type="button" aria-label="Play voice recording">
+              <span class="play-icon" id="voice-play-icon">▶</span>
+            </button>
+            <button id="voice-forward-btn" class="ctrl-btn secondary" type="button" aria-label="Forward 10 seconds" title="Forward 10s">
+              10s ↻
+            </button>
+          </div>
+
+          <!-- Hidden Native Audio Element with Local Asset -->
+          <audio id="voice-audio-element" preload="metadata" playsinline></audio>
+
+          <!-- Friendly Missing Asset Fallback Notice -->
+          <div id="voice-fallback-notice" class="fallback-notice hidden" role="status">
+            <div class="fallback-icon">💌</div>
+            <div class="fallback-text" id="voice-fallback-text">
+              Voice message coming soon! Place your audio file as <code>assets/voice-message.mp3</code> to hear it here.
+            </div>
+          </div>
+        </div>
+
+        <div class="screen-next-action">
+          <a href="#screen-6" class="scroll-cue-btn" aria-label="Scroll to Love Story Movie">
+            <span class="cue-label">Our Love Story Movie</span>
+            <span class="chevron-down">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 6: Our Love Story Movie (Video Player)
+         ======================================================== -->
+    <section id="screen-6" class="screen movie-screen" aria-labelledby="movie-heading">
+      <div class="screen-content movie-container">
+        <div class="section-eyebrow">
+          <span class="star-pill">✦ CHAPTER 05 ✦</span>
+        </div>
+
+        <h2 id="movie-heading" class="section-title">
+          Our Love Story Movie
+        </h2>
+        <p class="section-subtitle" id="movie-subtitle">
+          The little clips and captured memories of our journey together.
+        </p>
+
+        <div class="video-theater glass-panel" id="video-theater">
+          <!-- Video Frame -->
+          <div class="video-wrapper">
+            <video id="love-story-video" class="styled-video" preload="metadata" playsinline controls poster="assets/photo-1.jpg">
+              <source src="assets/love-story.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Video Missing / Error Fallback Poster -->
+            <div id="video-fallback-card" class="video-fallback-card hidden" role="status">
+              <div class="cinema-icon">🎬</div>
+              <h3 class="cinema-title">Our Cinema Awaits</h3>
+              <p class="cinema-text" id="video-fallback-text">
+                Your video memory is ready to be featured! Save your video as <code>assets/love-story.mp4</code> to watch it right here.
+              </p>
+              <div class="cinema-badge">Made with love for you ❤️</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="screen-next-action">
+          <a href="#screen-7" class="scroll-cue-btn" aria-label="Scroll to Gift Envelope">
+            <span class="cue-label">Open Your Little Gift</span>
+            <span class="chevron-down">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 7: Open Your Little Gift (Interactive Letter)
+         ======================================================== -->
+    <section id="screen-7" class="screen letter-screen" aria-labelledby="gift-heading">
+      <div class="screen-content letter-container">
+        <div class="section-eyebrow">
+          <span class="star-pill">✦ FINALE ✦</span>
+        </div>
+
+        <h2 id="gift-heading" class="section-title">
+          Open Your Little Gift
+        </h2>
+        <p class="section-subtitle" id="envelope-prompt">
+          Tap the wax seal to open your special letter
+        </p>
+
+        <!-- Interactive 3D Romantic Envelope -->
+        <div class="envelope-stage" id="envelope-stage">
+          <div class="envelope" id="envelope-element" tabindex="0" role="button" aria-expanded="false" aria-label="Tap to open the letter">
+            <!-- Envelope Flap -->
+            <div class="envelope-flap" id="envelope-flap">
+              <!-- Golden Wax Seal -->
+              <div class="wax-seal" id="wax-seal" title="Tap to break seal">
+                <span class="seal-heart">❤️</span>
+              </div>
+            </div>
+
+            <!-- Envelope Pocket / Body -->
+            <div class="envelope-pocket"></div>
+
+            <!-- Folded Letter Sliding Out -->
+            <div class="letter-sheet" id="letter-sheet">
+              <div class="letter-header">
+                <span class="letter-stamp">🌸</span>
+                <p class="letter-salutation" id="letter-salutation">En Anbu <span class="highlight-ammu" id="highlight-ammu">Ammu</span>-vukku,</p>
+              </div>
+
+              <div class="letter-body">
+                <p class="letter-text" id="letter-content-text">
+                  <!-- Injected from memories.js -->
+                </p>
+              </div>
+
+              <div class="letter-footer">
+                <p class="letter-closing" id="letter-closing-signature">Always & Forever Yours,</p>
+                <p class="letter-author" id="letter-author-name">Stephen (Un Purushan) <span class="beating-heart" aria-hidden="true">❤️</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grand Closing Statement -->
+        <div class="closing-statement-box glass-panel" id="closing-statement-box">
+          <p class="closing-quote" id="closing-quote-text">
+            "This is not just a website. It's a little world I made just for you."
+          </p>
+
+          <div class="closing-actions">
+            <button id="replay-btn" class="btn btn-secondary btn-replay" type="button">
+              <span class="btn-icon">↺</span>
+              <span class="btn-text">Experience Our Story Again</span>
+            </button>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p class="footer-note">Handcrafted with infinite love for my wife ❤️ • Our Little Universe</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       LOCKED SUSPENSE MODAL (Before 10:30 PM Birth Time Lock)
+       ======================================================== -->
+  <div id="locked-suspense-modal" class="locked-suspense-modal" aria-hidden="true" role="dialog" aria-labelledby="locked-modal-title">
+    <div class="locked-modal-backdrop" id="locked-backdrop"></div>
+    <div class="locked-modal-card glass-panel" id="locked-modal-card">
+      <button id="locked-close-btn" class="locked-close-btn" aria-label="Close suspense message">✕</button>
+
+      <div class="locked-avatar-wrap">
+        <div class="locked-lock-circle">
+          <span class="locked-icon-anim" id="locked-icon-anim">🔒</span>
+        </div>
+        <div class="locked-orbit-sparkles" aria-hidden="true">
+          <span class="lock-sparkle s1">✨</span>
+          <span class="lock-sparkle s2">💖</span>
+          <span class="lock-sparkle s3">🌸</span>
+        </div>
+      </div>
+
+      <div class="locked-pill-badge">
+        <span class="badge-icon">⏳</span>
+        <span>10:30 PM BIRTH TIME SPECIAL LOCK</span>
+        <span class="badge-icon">⏳</span>
+      </div>
+
+      <h2 id="locked-modal-title" class="locked-modal-title">
+        Shh... Idhu Stephen-oda Secret Lock! 🔒❤️
+      </h2>
+
+      <div class="locked-message-body">
+        <p class="locked-p-highlight">
+          Ammu... Idhu unga birth time-la <strong>(Night 10:30 PM)</strong> mattum dhaan open aagum nu unga husband <strong>Stephen</strong> andha maadhiri lock panni vechirukaaru! ❤️
+        </p>
+
+        <p class="locked-p-desc">
+          Idhu ipo open aagadhu ammu... Neenga unga birth time varaikum porumaiyaa wait pannunga! Ungalukaga ulla oru romba romba periya <em>thani secret surprise</em> kaathurukku! ✨
+        </p>
+
+        <!-- Sweet Husband Apology Note -->
+        <div class="locked-apology-box">
+          <div class="apology-emoji-header">🥺❤️</div>
+          <p class="locked-p-apology">
+            "Actually indha surprise-ah unga birthday-kkey Stephen panni irukkanum, aana konjam late aagiduchu ammu... konjam adjust pannikonga!"
+          </p>
+        </div>
+      </div>
+
+      <!-- Live Real-Time Countdown to 10:30 PM -->
+      <div class="locked-countdown-container">
+        <span class="locked-countdown-label">⏳ Time Remaining Until 10:30 PM Unlock:</span>
+        <div class="locked-countdown-timer" id="locked-countdown-display">
+          Calculating...
+        </div>
+        <p class="locked-countdown-hint">
+          Night 10:30 PM aana udaney indha secret surprise auto-va unlock aagidum ammu! 💖
+        </p>
+      </div>
+
+      <!-- Action Button -->
+      <div class="locked-actions">
+        <button id="locked-agree-btn" class="btn btn-primary btn-glow" type="button">
+          <span>Sari Stephen, Naan 10:30 PM Varakum Wait Pandren! 💖</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       10:30 PM MAGICAL CELEBRATION MODAL OVERLAY & FIREWORKS
+       ======================================================== -->
+  <div id="celebration-1030-modal" class="celebration-1030-modal vault-modal" aria-hidden="true" role="dialog" aria-labelledby="vault-heading">
+    <div class="celebration-backdrop" id="celebration-backdrop"></div>
+    <canvas id="fireworks-canvas" class="fireworks-canvas" aria-hidden="true"></canvas>
+
+    <div class="vault-modal-content glass-panel" id="vault-modal-content">
+      <button id="vault-close-btn" class="vault-close-btn" aria-label="Close Secret Love Vault">✕</button>
+
+      <!-- Vault Hero Header -->
+      <header class="vault-header">
+        <div class="vault-unlock-badge">
+          <span class="vault-lock-icon">🔓</span>
+          <span>10:30 PM SECRET LOVE VAULT UNLOCKED</span>
+          <span class="vault-sparkle-icon">✨</span>
+        </div>
+
+        <h2 id="vault-heading" class="vault-title">
+          The Midnight Miracle Chamber <span class="heart-pulse">💖</span>
+        </h2>
+
+        <p class="vault-subtext" id="vault-subtext">
+          Ammu pirandha andha ponnerathula, un purushan unakkaga thirandhu vecha ragasiya ulagam... Iniku mattum illa, eppovum unakkaga mattum dhaan! ❤️
+        </p>
+      </header>
+
+      <!-- SECTION 1: Fairy-Light Polaroid Photo Memory Line -->
+      <section class="vault-section polaroid-section">
+        <div class="vault-section-title-wrap">
+          <span class="fairy-light-wire" aria-hidden="true">
+            <span class="f-bulb b1">💡</span><span class="f-bulb b2">💡</span><span class="f-bulb b3">💡</span>
+            <span class="f-bulb b4">💡</span><span class="f-bulb b5">💡</span><span class="f-bulb b6">💡</span>
+          </span>
+          <h3 class="vault-section-title">
+            <span>📸</span> Fairy-Light Memory Polaroids
+          </h3>
+          <p class="vault-section-hint">Tap any photo to flip & read my secret love note behind it!</p>
+        </div>
+
+        <div class="polaroid-grid" id="polaroid-grid" role="list">
+          <!-- Populated dynamically by script.js from memories.js -->
+        </div>
+      </section>
+
+      <!-- SECTION 2: Husband's 7 Lifetime Promises -->
+      <section class="vault-section promises-section">
+        <div class="vault-section-title-wrap">
+          <h3 class="vault-section-title">
+            <span>💍</span> Un Purushanin 7 Sathiyangal
+          </h3>
+          <p class="vault-section-hint">Ovvoru sathiyathaiyum tap panni un anbaala seal pannu ammu ❤️</p>
+        </div>
+
+        <div class="promises-grid" id="promises-grid" role="list">
+          <!-- Populated dynamically by script.js from memories.js -->
+        </div>
+      </section>
+
+      <!-- SECTION 3: Official Lifetime Love Agreement Certificate -->
+      <section class="vault-section certificate-section">
+        <div class="gold-certificate" id="gold-certificate">
+          <div class="cert-crown">👑</div>
+          <div class="cert-badge">✦ OFFICIAL LIFETIME LOVE AGREEMENT ✦</div>
+          <h3 class="cert-awardee" id="cert-awardee">World's Best Wife & Permanent Soulmate</h3>
+          <p class="cert-awarded-to">Awarded to: <strong id="cert-name">Shalini</strong> <span class="cert-nickname">(En Anbu Ammu) ❤️</span></p>
+          <div class="cert-divider">✦ ✦ ✦</div>
+          <p class="cert-terms" id="cert-terms">
+            "Certified to be loved to infinity, scolded with pure affection, protected through every storm, and cared for like a baby until our hair turns grey."
+          </p>
+          <div class="cert-validity-box">
+            <span>VALIDITY:</span>
+            <strong>Indha Jenmam & Innum 7 Jenmangalukkum (Lifetime & Forever) ❤️</strong>
+          </div>
+          <div class="cert-footer">
+            <div class="cert-seal" title="Certified Pure Love">
+              <span class="cert-seal-symbol">❤️</span>
+              <span class="cert-seal-text">PURE LOVE</span>
+            </div>
+            <div class="cert-signature-block">
+              <p class="cert-sign-label">Un Purushan (Signed with Blood & Eternal Love):</p>
+              <p class="cert-signature" id="cert-signed-by">Stephen <span class="beating-heart" aria-hidden="true">❤️</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Vault Action Buttons -->
+      <footer class="vault-footer">
+        <button id="celebration-close-btn" class="btn btn-primary btn-glow" type="button">
+          <span>Continue Our Love Story ✨</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox Modal for Timeline Images -->
+  <div id="photo-modal" class="photo-modal" aria-hidden="true" role="dialog" aria-label="Photo Preview">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content glass-panel">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close photo preview">✕</button>
+      <div class="modal-image-wrapper">
+        <img id="modal-img" src="" alt="Enlarged memory photo">
+      </div>
+      <div class="modal-details">
+        <span class="modal-tag" id="modal-tag"></span>
+        <h4 class="modal-title" id="modal-title"></h4>
+        <p class="modal-date" id="modal-date"></p>
+        <p class="modal-desc" id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating "Send Love / Flying Kiss" Cute Interactive Widget -->
+  <aside class="floating-kiss-widget" aria-label="Interactive Love Widget">
+    <button id="flying-kiss-btn" class="kiss-btn" type="button" aria-label="Send a flying kiss to husband">
+      <span class="kiss-icon-anim">😘</span>
+      <span class="kiss-label">Send Kiss</span>
+    </button>
+  </aside>
+
+  <!-- Sweet Romantic Toast Notification -->
+  <div id="romantic-toast" class="romantic-toast" role="status" aria-live="polite">
+    <span class="toast-icon">💖</span>
+    <span class="toast-msg" id="toast-msg">He loves you to infinity and beyond!</span>
+  </div>
+
+  <!-- Background Music Audio Tags (DJ Crossfade Engine: Deck A & Deck B) -->
+  <audio id="bg-music-player" loop preload="auto" playsinline></audio>
+  <audio id="bg-music-player-2" loop preload="auto" playsinline></audio>
+
+  <!-- Dedicated Secret Vault Celebration Audio Player -->
+  <audio id="vault-music-player" loop preload="auto" playsinline></audio>
+
+  <!-- Scripts -->
+  <script src="memories.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

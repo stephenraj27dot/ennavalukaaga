@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A102F"/>
+      <stop offset="50%" stop-color="#2D124D"/>
+      <stop offset="100%" stop-color="#4A1E5C"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FDE047" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#F472B6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1A102F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#210F38"/>
+      <stop offset="100%" stop-color="#0E071A"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Night Sky -->
+  <rect width="600" height="450" fill="url(#skyGrad1)"/>
+  
+  <!-- Glowing Moon -->
+  <circle cx="450" cy="110" r="100" fill="url(#moonGlow)"/>
+  <circle cx="450" cy="110" r="38" fill="#FFFDF5"/>
+  <circle cx="462" cy="104" r="32" fill="#FAF5EE" opacity="0.3"/>
+  
+  <!-- Stars -->
+  <g fill="#FFF" opacity="0.8">
+    <circle cx="80" cy="60" r="1.5"/>
+    <circle cx="140" cy="95" r="1"/>
+    <circle cx="210" cy="50" r="2"/>
+    <circle cx="280" cy="110" r="1.5"/>
+    <circle cx="330" cy="70" r="1"/>
+    <circle cx="390" cy="40" r="2.5"/>
+    <circle cx="530" cy="80" r="1.5"/>
+    <circle cx="100" cy="180" r="1"/>
+    <circle cx="250" cy="190" r="1.8"/>
+  </g>
+  <path d="M210 44 L212 50 L218 52 L212 54 L210 60 L208 54 L202 52 L208 50 Z" fill="#FBBF24"/>
+  <path d="M390 34 L392 40 L398 42 L392 44 L390 50 L388 44 L382 42 L388 40 Z" fill="#F472B6"/>
+  
+  <!-- Distant Mountains -->
+  <path d="M-20 340 Q 150 240 320 320 T 620 290 L620 450 L-20 450 Z" fill="#180A2E" opacity="0.6"/>
+  <!-- Foreground Hill -->
+  <path d="M-10 370 Q 200 300 420 350 T 610 360 L610 450 L-10 450 Z" fill="url(#hillGrad)"/>
+  
+  <!-- Street Lamp Silhouette with Warm Glow -->
+  <circle cx="220" cy="270" r="45" fill="#FBBF24" opacity="0.25"/>
+  <circle cx="220" cy="270" r="25" fill="#FEF08A" opacity="0.4"/>
+  <path d="M219 265 L221 265 L223 385 L217 385 Z" fill="#3E2259"/>
+  <path d="M210 265 Q220 250 230 265 Z" fill="#582C7D"/>
+  
+  <!-- Two Loving Silhouettes Meeting -->
+  <g fill="#120624">
+    <!-- Person 1 -->
+    <circle cx="270" cy="315" r="13"/>
+    <path d="M260 330 C258 350 260 385 264 400 L276 400 C279 385 281 350 279 330 Z"/>
+    
+    <!-- Person 2 -->
+    <circle cx="305" cy="318" r="12"/>
+    <path d="M294 332 C292 355 295 385 298 400 L311 400 C314 385 316 355 314 332 Z"/>
+    
+    <!-- Connecting Floating Heart -->
+    <path d="M287 296 C287 292 284 288 280 288 C276 288 274 292 274 295 C274 301 287 310 287 310 C287 310 300 301 300 295 C300 292 298 288 294 288 C290 288 287 292 287 296 Z" fill="#F472B6" opacity="0.9"/>
+  </g>
+  
+  <!-- Badge/Caption Banner -->
+  <rect x="180" y="405" width="240" height="28" rx="14" fill="#000" opacity="0.4"/>
+  <text x="300" y="424" fill="#FCE7F0" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="1">OUR FIRST MEETING</text>
+</svg>

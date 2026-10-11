@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#190F2E"/>
+      <stop offset="60%" stop-color="#361545"/>
+      <stop offset="100%" stop-color="#551F52"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE68A" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#F472B6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#190F2E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="600" height="450" fill="url(#skyGrad4)"/>
+  <circle cx="300" cy="230" r="170" fill="url(#sunGlow)"/>
+  
+  <!-- Glowing Constellation & Floating Orbs -->
+  <g fill="#FFF" opacity="0.85">
+    <circle cx="80" cy="90" r="2"/>
+    <circle cx="150" cy="60" r="1.5"/>
+    <circle cx="230" cy="110" r="1.8"/>
+    <circle cx="480" cy="70" r="2.2"/>
+    <circle cx="530" cy="130" r="1.5"/>
+    <circle cx="380" cy="80" r="1.8"/>
+    <circle cx="110" cy="220" r="1.2"/>
+    <circle cx="490" cy="260" r="1.5"/>
+  </g>
+  
+  <!-- Romantic Golden Light Rays -->
+  <g stroke="#FDE68A" stroke-width="1.5" opacity="0.3">
+    <line x1="300" y1="230" x2="160" y2="90"/>
+    <line x1="300" y1="230" x2="440" y2="90"/>
+    <line x1="300" y1="230" x2="300" y2="50"/>
+    <line x1="300" y1="230" x2="100" y2="230"/>
+    <line x1="300" y1="230" x2="500" y2="230"/>
+  </g>
+  
+  <!-- Loving Embrace Silhouette with Heart Halo -->
+  <g transform="translate(190, 110)">
+    <!-- Heart Halo -->
+    <path d="M110 50 C110 25 85 5 55 5 C25 5 10 25 10 50 C10 95 110 150 110 150 C110 150 210 95 210 50 C210 25 195 5 165 5 C135 5 110 25 110 50 Z" fill="#F43F5E" opacity="0.25"/>
+    
+    <!-- Warm Embrace Silhouettes -->
+    <!-- Partner 1 -->
+    <circle cx="95" cy="155" r="18" fill="#140824"/>
+    <path d="M75 180 C70 215 70 260 75 285 L120 285 C125 260 120 215 115 180 Z" fill="#140824"/>
+    
+    <!-- Partner 2 gently resting head on shoulder -->
+    <circle cx="122" cy="162" r="16" fill="#200B36"/>
+    <path d="M105 185 C100 220 105 260 110 285 L145 285 C150 260 145 220 140 185 Z" fill="#200B36"/>
+    
+    <!-- Arm wrapping around -->
+    <path d="M85 200 C95 230 140 230 145 205" stroke="#FDE68A" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.9"/>
+    
+    <!-- Floating Gentle Sparks -->
+    <circle cx="70" cy="140" r="3" fill="#FDE68A"/>
+    <circle cx="150" cy="135" r="3" fill="#F472B6"/>
+    <circle cx="110" cy="115" r="4" fill="#FFF"/>
+  </g>
+  
+  <!-- Caption Ribbon -->
+  <rect x="155" y="405" width="290" height="28" rx="14" fill="#000" opacity="0.4"/>
+  <text x="300" y="424" fill="#FCE7F0" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="1">WHEN YOU MADE ME HAPPY</text>
+</svg>

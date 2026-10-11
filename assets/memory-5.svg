@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F0826"/>
+      <stop offset="45%" stop-color="#241042"/>
+      <stop offset="75%" stop-color="#461B59"/>
+      <stop offset="100%" stop-color="#70246B"/>
+    </linearGradient>
+    <radialGradient id="milkyway" cx="60%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#E9D5FF" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#F472B6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0F0826" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="600" height="450" fill="url(#skyGrad5)"/>
+  <!-- Milky Way Cloud -->
+  <ellipse cx="360" cy="140" rx="260" ry="90" fill="url(#milkyway)" transform="rotate(-15 360 140)"/>
+  
+  <!-- Shooting Star / Meteor -->
+  <line x1="120" y1="40" x2="280" y2="100" stroke="#FFFDF5" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <line x1="80" y1="25" x2="280" y2="100" stroke="#FDE047" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="280" cy="100" r="3.5" fill="#FFF"/>
+  
+  <!-- Dense Starlight Field -->
+  <g fill="#FFF" opacity="0.9">
+    <circle cx="50" cy="80" r="1.5"/>
+    <circle cx="100" cy="150" r="1.2"/>
+    <circle cx="180" cy="60" r="2.2"/>
+    <circle cx="230" cy="120" r="1.8"/>
+    <circle cx="310" cy="40" r="1.5"/>
+    <circle cx="370" cy="90" r="2.5"/>
+    <circle cx="430" cy="45" r="1.6"/>
+    <circle cx="490" cy="110" r="2"/>
+    <circle cx="540" cy="65" r="1.5"/>
+    <circle cx="560" cy="170" r="1.8"/>
+    <circle cx="80" cy="240" r="1.2"/>
+    <circle cx="500" cy="240" r="1.4"/>
+  </g>
+  <path d="M370 82 L372 88 L378 90 L372 92 L370 98 L368 92 L362 90 L368 88 Z" fill="#FBBF24"/>
+  <path d="M180 52 L182 58 L188 60 L182 62 L180 68 L178 62 L172 60 L178 58 Z" fill="#F472B6"/>
+  
+  <!-- Hilltop Silhouette -->
+  <path d="M-20 360 Q 300 280 620 360 L620 450 L-20 450 Z" fill="#0C041C"/>
+  
+  <!-- Two Partners Sitting on Hilltop Gazing at Stars Together -->
+  <g fill="#1F0A38">
+    <!-- Partner 1 -->
+    <circle cx="280" cy="285" r="14"/>
+    <path d="M268 298 C265 315 260 340 260 360 L295 360 C295 340 292 315 288 298 Z"/>
+    
+    <!-- Partner 2 leaning on shoulder -->
+    <circle cx="310" cy="290" r="13"/>
+    <path d="M298 302 C295 318 294 340 292 360 L325 360 C325 340 322 318 318 302 Z"/>
+    
+    <!-- Blanket underneath -->
+    <path d="M245 355 Q 300 350 345 355 L350 365 Q 295 362 240 365 Z" fill="#F472B6" opacity="0.6"/>
+    
+    <!-- Glowing Little Star in their hands / between them -->
+    <circle cx="295" cy="325" r="3" fill="#FDE047"/>
+    <circle cx="295" cy="325" r="8" fill="#FDE047" opacity="0.3"/>
+  </g>
+  
+  <!-- Caption Ribbon -->
+  <rect x="155" y="405" width="290" height="28" rx="14" fill="#000" opacity="0.4"/>
+  <text x="300" y="424" fill="#FCE7F0" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="1">MY FAVOURITE MEMORY WITH YOU</text>
+</svg>
