@@ -147,6 +147,7 @@ const UniverseConfig = {
     label: "Ammu Pirandha Ponneram: 10:30 PM",
     vaultTitle: "10:30 PM Secret Love Vault 💖",
     vaultSubtitle: "Ammu pirandha andha ponnerathula, Stephen unakkaga thirandhu vecha ragasiya ulagam ✨",
+    secretPassword: "Sh@lini@28",
     suspense: {
       badge: "NIGHT 10:30 PM SPECIAL TIME-LOCK",
       title: "Shh... Idhu Stephen-oda Secret Lock! 🔒✨",

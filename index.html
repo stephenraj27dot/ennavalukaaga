@@ -77,19 +77,19 @@
           </p>
         </div>
 
-        <!-- 10:30 PM Magical Golden Hour Banner & Countdown -->
+        <!-- 10:30 PM Magical Golden Hour Banner & Secret Surprise Lock -->
         <div class="born-time-banner glass-panel" id="born-time-banner">
           <div class="born-time-header">
             <span class="born-time-sparkle">✨</span>
-            <span class="born-time-title">Ammu Pirandha Ponneram: <strong>10:30 PM</strong></span>
+            <span class="born-time-title">Ammu's Secret Surprise • <strong>10:30 PM Special</strong></span>
             <span class="born-time-sparkle">✨</span>
           </div>
           <p class="born-time-countdown" id="born-time-countdown">
-            <span class="clock-icon">⏳</span> 10:30 PM Magic Hour: <strong id="countdown-ticker">Calculating...</strong>
+            <span class="clock-icon">🔐</span> Love Lock Status: <strong id="countdown-ticker">Locked for Ammu 💖</strong>
           </p>
           <div class="born-time-actions">
-            <button id="trigger-1030-btn" class="born-time-preview-btn" type="button" aria-label="10:30 PM Secret Surprise">
-              <span id="trigger-btn-icon">🔒</span> <span id="trigger-btn-text">Secret Surprise (10:30 PM)</span> <span class="btn-star">✨</span>
+            <button id="trigger-1030-btn" class="born-time-preview-btn" type="button" aria-label="Unlock Secret Surprise with Love Password">
+              <span id="trigger-btn-icon">🔐</span> <span id="trigger-btn-text">Unlock Secret Surprise</span> <span class="btn-star">✨</span>
             </button>
           </div>
         </div>
@@ -407,6 +407,11 @@
           </p>
 
           <div class="closing-actions">
+            <button id="finale-secret-btn" class="btn btn-primary btn-glow" type="button" aria-label="Unlock Stephen's Secret Surprise">
+              <span class="btn-icon">🔐</span>
+              <span class="btn-text">Unlock Secret Surprise</span>
+              <span class="btn-star">✨</span>
+            </button>
             <button id="replay-btn" class="btn btn-secondary btn-replay" type="button">
               <span class="btn-icon">↺</span>
               <span class="btn-text">Experience Our Story Again</span>
@@ -423,68 +428,121 @@
   </main>
 
   <!-- ========================================================
-       LOCKED SUSPENSE MODAL (Before 10:30 PM Birth Time Lock)
+       SECRET LOVE PASSWORD & ANIMATED KEY LOCKER MODAL
        ======================================================== -->
   <div id="locked-suspense-modal" class="locked-suspense-modal" aria-hidden="true" role="dialog" aria-labelledby="locked-modal-title">
     <div class="locked-modal-backdrop" id="locked-backdrop"></div>
     <div class="locked-modal-card glass-panel" id="locked-modal-card">
-      <button id="locked-close-btn" class="locked-close-btn" aria-label="Close suspense message">✕</button>
+      <button id="locked-close-btn" class="locked-close-btn" aria-label="Close secret lock">✕</button>
 
-      <div class="locked-avatar-wrap">
-        <div class="locked-lock-circle">
-          <span class="locked-icon-anim" id="locked-icon-anim">🔒</span>
-        </div>
-        <div class="locked-orbit-sparkles" aria-hidden="true">
-          <span class="lock-sparkle s1">✨</span>
-          <span class="lock-sparkle s2">💖</span>
-          <span class="lock-sparkle s3">🌸</span>
+      <!-- Royal Padlock & Animated Golden Key Visual Stage -->
+      <div class="vault-locker-stage" id="vault-locker-stage">
+        <div class="padlock-assembly" id="padlock-assembly">
+          <!-- Radial Flash on Unlock -->
+          <div class="unlock-light-burst" id="unlock-light-burst" aria-hidden="true"></div>
+
+          <!-- Padlock Shackle (Pivots and pops open) -->
+          <div class="padlock-shackle" id="padlock-shackle">
+            <div class="shackle-bar"></div>
+          </div>
+
+          <!-- Padlock Body -->
+          <div class="padlock-body" id="padlock-body">
+            <div class="padlock-inner-rim">
+              <span class="padlock-heart-emblem">❤️</span>
+              <div class="padlock-keyhole-box">
+                <div class="padlock-keyhole" id="padlock-keyhole"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Magical Golden Key (Flies in, inserts & turns 90deg) -->
+          <div class="golden-heart-key" id="golden-heart-key" aria-hidden="true">
+            <svg class="key-svg" viewBox="0 0 100 42" width="100" height="42">
+              <defs>
+                <linearGradient id="goldKeyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#fffbeb" />
+                  <stop offset="25%" stop-color="#fde047" />
+                  <stop offset="65%" stop-color="#f59e0b" />
+                  <stop offset="100%" stop-color="#b45309" />
+                </linearGradient>
+                <filter id="keyGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+              <!-- Heart Bow (Key Handle) -->
+              <path d="M 22 8 C 15 0, 3 3, 5 17 C 7 28, 22 36, 22 36 C 22 36, 37 28, 39 17 C 41 3, 29 0, 22 8 Z" fill="url(#goldKeyGradient)" filter="url(#keyGlowFilter)"/>
+              <path d="M 22 14 C 18 9, 10 11, 11 19 C 12 25, 22 30, 22 30 C 22 30, 32 25, 33 19 C 34 11, 26 9, 22 14 Z" fill="#2d123d" />
+              <!-- Ornate Key Shaft -->
+              <rect x="32" y="17" width="56" height="8" rx="4" fill="url(#goldKeyGradient)" filter="url(#keyGlowFilter)"/>
+              <!-- Teeth / Wards (Romantic notches) -->
+              <path d="M 72 25 L 72 36 L 78 36 L 78 25 Z" fill="url(#goldKeyGradient)"/>
+              <path d="M 81 25 L 81 33 L 86 33 L 86 25 Z" fill="url(#goldKeyGradient)"/>
+            </svg>
+            <div class="key-sparkle-trail"></div>
+          </div>
+
+          <!-- Orbiting Lock Sparkles -->
+          <div class="locked-orbit-sparkles" aria-hidden="true">
+            <span class="lock-sparkle s1">✨</span>
+            <span class="lock-sparkle s2">💖</span>
+            <span class="lock-sparkle s3">🌸</span>
+          </div>
         </div>
       </div>
 
       <div class="locked-pill-badge">
-        <span class="badge-icon">⏳</span>
-        <span>10:30 PM BIRTH TIME SPECIAL LOCK</span>
-        <span class="badge-icon">⏳</span>
+        <span class="badge-icon">🔐</span>
+        <span>SECRET LOVE LOCK • FOR AMMU ONLY</span>
+        <span class="badge-icon">💖</span>
       </div>
 
       <h2 id="locked-modal-title" class="locked-modal-title">
-        Shh... Idhu Stephen-oda Secret Lock! 🔒❤️
+        Stephen-oda Secret Love Lock! 💖
       </h2>
 
-      <div class="locked-message-body">
-        <p class="locked-p-highlight">
-          Ammu... Idhu unga birth time-la <strong>(Night 10:30 PM)</strong> mattum dhaan open aagum nu unga husband <strong>Stephen</strong> andha maadhiri lock panni vechirukaaru! ❤️
-        </p>
+      <p class="locked-intro-text">
+        Ammu... Ungalukaga Stephen panni vechirukira ragasiya surprise! Idhoda key un kitta dhaan irukku... Unga Love Password pottu unlock pannunga! ❤️
+      </p>
 
-        <p class="locked-p-desc">
-          Idhu ipo open aagadhu ammu... Neenga unga birth time varaikum porumaiyaa wait pannunga! Ungalukaga ulla oru romba romba periya <em>thani secret surprise</em> kaathurukku! ✨
-        </p>
-
-        <!-- Sweet Husband Apology Note -->
-        <div class="locked-apology-box">
-          <div class="apology-emoji-header">🥺❤️</div>
-          <p class="locked-p-apology">
-            "Actually indha surprise-ah unga birthday-kkey Stephen panni irukkanum, aana konjam late aagiduchu ammu... konjam adjust pannikonga!"
-          </p>
+      <!-- Love Password Form -->
+      <form id="vault-password-form" class="vault-password-form" novalidate onsubmit="return false;">
+        <div class="password-field-container">
+          <span class="field-icon" aria-hidden="true">🔒</span>
+          <input 
+            type="password" 
+            id="secret-password-input" 
+            class="secret-password-input" 
+            placeholder="Type Love Password..." 
+            autocomplete="off" 
+            autocapitalize="off" 
+            spellcheck="false" 
+            required 
+            aria-label="Secret Love Password"
+          >
+          <button type="button" id="toggle-pwd-btn" class="toggle-pwd-btn" aria-label="Show or hide password" title="Toggle password view">
+            <span id="pwd-eye-icon">👁️</span>
+          </button>
         </div>
-      </div>
 
-      <!-- Live Real-Time Countdown to 10:30 PM -->
-      <div class="locked-countdown-container">
-        <span class="locked-countdown-label">⏳ Time Remaining Until 10:30 PM Unlock:</span>
-        <div class="locked-countdown-timer" id="locked-countdown-display">
-          Calculating...
+        <div id="password-feedback-msg" class="password-feedback-msg" role="status" aria-live="polite"></div>
+
+        <div class="password-actions-wrap">
+          <button id="unlock-submit-btn" class="btn btn-primary btn-unlock-glow" type="submit">
+            <span class="btn-icon">🗝️</span>
+            <span class="btn-text">Unlock My Secret Surprise</span>
+            <span class="btn-star">✨</span>
+          </button>
         </div>
-        <p class="locked-countdown-hint">
-          Night 10:30 PM aana udaney indha secret surprise auto-va unlock aagidum ammu! 💖
-        </p>
-      </div>
+      </form>
 
-      <!-- Action Button -->
-      <div class="locked-actions">
-        <button id="locked-agree-btn" class="btn btn-primary btn-glow" type="button">
-          <span>Sari Stephen, Naan 10:30 PM Varakum Wait Pandren! 💖</span>
-        </button>
+      <!-- Sweet Husband Note -->
+      <div class="locked-apology-box">
+        <div class="apology-emoji-header">🥺❤️</div>
+        <p class="locked-p-apology">
+          "Actually indha surprise-ah Stephen unga birthday-kkey panni irukkanum, aana konjam late aagiduchu ammu... ungalukaga romba aasa aasaiyaa panni vechirukken, open panni paarunga!"
+        </p>
       </div>
     </div>
   </div>
@@ -574,6 +632,20 @@
             </div>
           </div>
         </div>
+
+        <!-- Download & Save Certificate Options for Wife -->
+        <div class="cert-download-actions">
+          <button id="download-cert-btn" class="btn btn-primary btn-cert-download" type="button" aria-label="Download Official Agreement Certificate">
+            <span class="btn-icon">📥</span>
+            <span class="btn-text">Download Certificate (HD Image)</span>
+            <span class="btn-star">✨</span>
+          </button>
+          <button id="print-cert-btn" class="btn btn-secondary btn-cert-print" type="button" aria-label="Print or Save Certificate as PDF">
+            <span class="btn-icon">🖨️</span>
+            <span class="btn-text">Print / Save as PDF</span>
+          </button>
+        </div>
+        <p class="cert-download-hint">💖 Ammu, tap above to save our official agreement in your phone gallery!</p>
       </section>
 
       <!-- Vault Action Buttons -->
@@ -623,7 +695,8 @@
   <!-- Dedicated Secret Vault Celebration Audio Player -->
   <audio id="vault-music-player" loop preload="auto" playsinline></audio>
 
-  <!-- Scripts -->
+  <!-- External & App Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="memories.js"></script>
   <script src="script.js"></script>
 </body>

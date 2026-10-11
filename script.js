@@ -1285,7 +1285,7 @@ function initInteractiveRomance() {
     });
   }
 
-  // 5. Interactive Gold Certificate Click
+  // 5. Interactive Gold Certificate Click & Actions
   const certEl = document.getElementById('gold-certificate');
   if (certEl) {
     certEl.addEventListener('click', () => {
@@ -1293,6 +1293,340 @@ function initInteractiveRomance() {
       showRomanticToast("Certified & Sealed: Ammu belongs to Stephen for infinity! 💍❤️", "👑");
     });
   }
+
+  // 6. Certificate Download & Print Handlers
+  const downloadCertBtn = document.getElementById('download-cert-btn');
+  const printCertBtn = document.getElementById('print-cert-btn');
+
+  if (downloadCertBtn) {
+    downloadCertBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      downloadCertificate();
+    });
+  }
+
+  if (printCertBtn) {
+    printCertBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showRomanticToast("Opening print dialog... Choose 'Save as PDF'! 📄❤️", "🖨️");
+      setTimeout(() => {
+        window.print();
+      }, 350);
+    });
+  }
+}
+
+// Dedicated Certificate Exporter Engine (Flawless Pixel-Perfect HD Canvas Generator)
+function downloadCertificate() {
+  showRomanticToast("Preparing Ammu's HD Certificate... 👑💖", "⏳");
+  generateHDCanvasCertificate();
+}
+
+function triggerFileDownload(dataUrl, fileName) {
+  const link = document.createElement('a');
+  link.download = fileName;
+  link.href = dataUrl;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+// Standalone High-Definition (1600x1100) Masterpiece Canvas Certificate Generator
+async function generateHDCanvasCertificate() {
+  // Wait for Google Fonts (Great Vibes, Cormorant Garamond, Plus Jakarta Sans) to be fully ready
+  if (document.fonts && document.fonts.ready) {
+    try {
+      await document.fonts.ready;
+    } catch (e) {}
+  }
+
+  const canvas = document.createElement('canvas');
+  canvas.width = 1600;
+  canvas.height = 1100;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  const W = 1600;
+  const H = 1100;
+  const midX = W / 2; // 800
+
+  // 1. Warm Antique Ivory & Cream Parchment Background
+  const bgGrad = ctx.createRadialGradient(midX, H / 2, 80, midX, H / 2, 900);
+  bgGrad.addColorStop(0, '#ffffff');
+  bgGrad.addColorStop(0.55, '#fffef7');
+  bgGrad.addColorStop(1, '#fef9eb');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // 2. Ornate Double Gold Border
+  // Outer Border
+  ctx.lineWidth = 10;
+  ctx.strokeStyle = '#d97706';
+  ctx.strokeRect(36, 36, W - 72, H - 72);
+
+  // Inner Fine Gold Line
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = '#b45309';
+  ctx.strokeRect(50, 50, W - 100, H - 100);
+
+  // Corner Rosette Accents
+  ctx.fillStyle = '#d97706';
+  ctx.font = '24px serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  const corners = [
+    [43, 43], [W - 43, 43], [43, H - 43], [W - 43, H - 43],
+    [60, 60], [W - 60, 60], [60, H - 60], [W - 60, H - 60]
+  ];
+  corners.forEach(([cx, cy]) => ctx.fillText('✦', cx, cy));
+
+  // 3. Royal Crown Emblem
+  ctx.font = '64px sans-serif';
+  ctx.fillText('👑', midX, 125);
+
+  // 4. Gold Pill Banner
+  const bannerW = 540;
+  const bannerH = 38;
+  const bannerX = midX - bannerW / 2;
+  const bannerY = 165;
+  ctx.fillStyle = 'rgba(217, 119, 6, 0.12)';
+  ctx.beginPath();
+  if (ctx.roundRect) {
+    ctx.roundRect(bannerX, bannerY, bannerW, bannerH, 19);
+  } else {
+    ctx.rect(bannerX, bannerY, bannerW, bannerH);
+  }
+  ctx.fill();
+  ctx.lineWidth = 1.5;
+  ctx.strokeStyle = '#d97706';
+  ctx.stroke();
+
+  ctx.fillStyle = '#b45309';
+  ctx.font = 'bold 18px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('✦ OFFICIAL LIFETIME LOVE AGREEMENT ✦', midX, 184);
+
+  // 5. Subtitle
+  ctx.fillStyle = '#7e22ce';
+  ctx.font = '16px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('Certified by the Universe & Registered in Husband\'s Heart', midX, 225);
+
+  // 6. Awardee Category
+  ctx.fillStyle = '#831843';
+  ctx.font = 'bold italic 34px "Cormorant Garamond", serif';
+  ctx.fillText('World\'s Best Wife & Permanent Soulmate', midX, 275);
+
+  // 7. Salutation Label
+  ctx.fillStyle = '#4c1d95';
+  ctx.font = '20px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('Awarded with Infinite Love to:', midX, 325);
+
+  // 8. Wife Name ("Shalini" in Large Gorgeous Calligraphy)
+  ctx.fillStyle = '#db2777';
+  ctx.font = 'italic bold 96px "Great Vibes", "Cormorant Garamond", cursive, serif';
+  ctx.fillText('Shalini', midX, 420);
+
+  // 9. Nickname
+  ctx.fillStyle = '#831843';
+  ctx.font = 'bold 26px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('(En Anbu Ammu) ❤️', midX, 485);
+
+  // 10. Star Divider
+  ctx.fillStyle = '#d97706';
+  ctx.font = '26px serif';
+  ctx.fillText('✦   ✦   ✦', midX, 535);
+
+  // 11. Agreement Terms Text (Centered & Balanced)
+  ctx.fillStyle = '#3b1254';
+  ctx.font = 'italic 23px "Cormorant Garamond", serif';
+  ctx.fillText('"Certified to be loved to infinity, scolded with pure affection,', midX, 585);
+  ctx.fillText('protected through every storm, and cared for like a baby until our hair turns grey."', midX, 622);
+
+  // 12. Validity Box
+  const pillW = 820;
+  const pillH = 48;
+  const pillX = midX - pillW / 2;
+  const pillY = 665;
+  ctx.fillStyle = 'rgba(251, 191, 36, 0.22)';
+  ctx.beginPath();
+  if (ctx.roundRect) {
+    ctx.roundRect(pillX, pillY, pillW, pillH, 24);
+  } else {
+    ctx.rect(pillX, pillY, pillW, pillH);
+  }
+  ctx.fill();
+  ctx.strokeStyle = '#d97706';
+  ctx.lineWidth = 1.8;
+  ctx.stroke();
+
+  ctx.fillStyle = '#92400e';
+  ctx.font = 'bold 18px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('VALIDITY: Indha Jenmam & Innum 7 Jenmangalukkum (Lifetime & Forever) ❤️', midX, 689);
+
+  // 13. Horizontal Divider Line
+  ctx.strokeStyle = 'rgba(219, 39, 119, 0.35)';
+  ctx.setLineDash([8, 8]);
+  ctx.beginPath();
+  ctx.moveTo(140, 750);
+  ctx.lineTo(W - 140, 750);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Center diamond accent on divider
+  ctx.fillStyle = '#d97706';
+  ctx.font = '20px serif';
+  ctx.fillText('✦', midX, 750);
+
+  // 14. Footer Elements (Left: Seal, Center: Registry, Right: Signature)
+  // Left: Pure Love Gold Seal Graphic (Center: X = 320, Y = 875)
+  const sealX = 320;
+  const sealY = 875;
+  const sealR = 56;
+  const sealGrad = ctx.createRadialGradient(sealX, sealY, 8, sealX, sealY, sealR);
+  sealGrad.addColorStop(0, '#fef08a');
+  sealGrad.addColorStop(0.55, '#f59e0b');
+  sealGrad.addColorStop(1, '#b45309');
+  ctx.fillStyle = sealGrad;
+  ctx.beginPath();
+  ctx.arc(sealX, sealY, sealR, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.lineWidth = 3.5;
+  ctx.strokeStyle = '#fffbeb';
+  ctx.stroke();
+
+  ctx.fillStyle = '#ffffff';
+  ctx.font = '32px sans-serif';
+  ctx.fillText('❤️', sealX, sealY - 8);
+  ctx.font = 'bold 13px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('PURE LOVE', sealX, sealY + 24);
+
+  // Center: Registry Details
+  ctx.fillStyle = '#78350f';
+  ctx.font = 'bold 14px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('✦ REGISTRY NO: STEPHEN-SHALINI-2026 ✦', midX, 855);
+  ctx.fillStyle = '#64748b';
+  ctx.font = '13px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('Recorded in the Universe • Seven Lifetimes Guarantee', midX, 882);
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = '12px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('Forever & Always Ammu\'s Devoted Husband ❤️', midX, 905);
+
+  // Right: Signature Block (Center: X = 1280, Y = 875)
+  const sigX = 1280;
+  ctx.fillStyle = '#475569';
+  ctx.font = 'italic 17px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('Un Purushan (Signed with Eternal Love):', sigX, 845);
+
+  ctx.fillStyle = '#db2777';
+  ctx.font = 'italic bold 64px "Great Vibes", "Cormorant Garamond", cursive, serif';
+  ctx.fillText('Stephen ❤️', sigX, 908);
+
+  // 15. Bottom Watermark Note
+  ctx.fillStyle = '#94a3b8';
+  ctx.font = '13px "Plus Jakarta Sans", sans-serif';
+  ctx.fillText('✦ Only You • Ammu\'s Midnight Miracle Chamber • Handcrafted with Infinite Love by Stephen ✦', midX, 1010);
+
+  // Export to PNG & Trigger Download
+  try {
+    const dataUrl = canvas.toDataURL('image/png');
+    triggerFileDownload(dataUrl, 'Shalini_Lifetime_Love_Certificate.png');
+    if (typeof triggerRomanticConfetti === 'function') triggerRomanticConfetti();
+    showRomanticToast('Certificate downloaded to gallery! Ammu belongs to Stephen! 👑💖', '🎉');
+  } catch (err) {
+    console.error('Failed to export certificate canvas:', err);
+    showRomanticToast('Please use "Print / Save as PDF" button! 📄❤️', '⚠️');
+  }
+}
+
+// Synthesized Web Audio Sound Effects for Key & Padlock Animation
+function createSynthesizedLockAudio() {
+  const AudioCtx = window.AudioContext || window.webkitAudioContext;
+  let ctx = null;
+
+  function getCtx() {
+    if (!ctx && AudioCtx) ctx = new AudioCtx();
+    if (ctx && ctx.state === 'suspended') ctx.resume();
+    return ctx;
+  }
+
+  return {
+    playKeyChime() {
+      const c = getCtx();
+      if (!c) return;
+      const now = c.currentTime;
+      // Sweet 4-note ascending celestial chime (C5 -> E5 -> G5 -> C6)
+      const notes = [523.25, 659.25, 783.99, 1046.50];
+      notes.forEach((freq, i) => {
+        try {
+          const osc = c.createOscillator();
+          const gain = c.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + i * 0.1);
+          gain.gain.setValueAtTime(0.001, now + i * 0.1);
+          gain.gain.exponentialRampToValueAtTime(0.09, now + i * 0.1 + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.1 + 0.45);
+          osc.connect(gain);
+          gain.connect(c.destination);
+          osc.start(now + i * 0.1);
+          osc.stop(now + i * 0.1 + 0.5);
+        } catch (e) {}
+      });
+    },
+
+    playKeyTurnSound() {
+      const c = getCtx();
+      if (!c) return;
+      const now = c.currentTime;
+      try {
+        const osc = c.createOscillator();
+        const gain = c.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(1100, now);
+        osc.frequency.exponentialRampToValueAtTime(260, now + 0.07);
+        gain.gain.setValueAtTime(0.12, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+        osc.connect(gain);
+        gain.connect(c.destination);
+        osc.start(now);
+        osc.stop(now + 0.09);
+      } catch (e) {}
+    },
+
+    playUnlockFanfare() {
+      const c = getCtx();
+      if (!c) return;
+      const now = c.currentTime;
+      try {
+        // Metallic latch pop
+        const latch = c.createOscillator();
+        const latchGain = c.createGain();
+        latch.type = 'square';
+        latch.frequency.setValueAtTime(480, now);
+        latch.frequency.exponentialRampToValueAtTime(140, now + 0.08);
+        latchGain.gain.setValueAtTime(0.16, now);
+        latchGain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+        latch.connect(latchGain);
+        latchGain.connect(c.destination);
+        latch.start(now);
+        latch.stop(now + 0.1);
+
+        // Joyful bell chord arpeggio
+        const chord = [392.00, 523.25, 659.25, 783.99, 1046.50];
+        chord.forEach((freq, idx) => {
+          const bell = c.createOscillator();
+          const bellGain = c.createGain();
+          bell.type = 'sine';
+          bell.frequency.setValueAtTime(freq, now + 0.05 + idx * 0.07);
+          bellGain.gain.setValueAtTime(0.001, now + 0.05 + idx * 0.07);
+          bellGain.gain.exponentialRampToValueAtTime(0.09, now + 0.07 + idx * 0.07);
+          bellGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.65 + idx * 0.07);
+          bell.connect(bellGain);
+          bellGain.connect(c.destination);
+          bell.start(now + 0.05 + idx * 0.07);
+          bell.stop(now + 0.75 + idx * 0.07);
+        });
+      } catch (e) {}
+    }
+  };
 }
 
 // 5. Romantic Toast Notification Helper
@@ -1315,15 +1649,19 @@ function showRomanticToast(msg, icon = '💖') {
 }
 
 /* ====================================================================
-   10:30 PM BORN TIME COUNTDOWN, FIREWORKS & BGM 2 SYNC ENGINE
+   10:30 PM BORN TIME, LOVE PASSWORD & KEY UNLOCKING ENGINE
    ==================================================================== */
 function initBornTimeCelebration(bornConfig, audioManager) {
   const targetHour = (bornConfig && bornConfig.hour !== undefined) ? bornConfig.hour : 22; // 10 PM
   const targetMinute = (bornConfig && bornConfig.minute !== undefined) ? bornConfig.minute : 30; // 30 Mins
+  const EXPECTED_PASSWORD = (bornConfig && bornConfig.secretPassword) ? bornConfig.secretPassword : "Sh@lini@28";
+
   const tickerEl = document.getElementById('countdown-ticker');
   const triggerBtn = document.getElementById('trigger-1030-btn');
   const triggerBtnIcon = document.getElementById('trigger-btn-icon');
   const triggerBtnText = document.getElementById('trigger-btn-text');
+  const finaleSecretBtn = document.getElementById('finale-secret-btn');
+
   const modal = document.getElementById('celebration-1030-modal');
   const closeBtn = document.getElementById('celebration-close-btn');
   const vaultCloseBtn = document.getElementById('vault-close-btn');
@@ -1332,16 +1670,24 @@ function initBornTimeCelebration(bornConfig, audioManager) {
   const polaroidGrid = document.getElementById('polaroid-grid');
   const promisesGrid = document.getElementById('promises-grid');
 
-  // Locked Suspense Modal Elements
+  // Locked Suspense Modal & Love Password Elements
   const lockedModal = document.getElementById('locked-suspense-modal');
   const lockedCloseBtn = document.getElementById('locked-close-btn');
   const lockedBackdrop = document.getElementById('locked-backdrop');
-  const lockedAgreeBtn = document.getElementById('locked-agree-btn');
-  const lockedCountdownDisplay = document.getElementById('locked-countdown-display');
+  const padlockAssembly = document.getElementById('padlock-assembly');
+
+  const vaultPasswordForm = document.getElementById('vault-password-form');
+  const passwordInput = document.getElementById('secret-password-input');
+  const togglePwdBtn = document.getElementById('toggle-pwd-btn');
+  const unlockSubmitBtn = document.getElementById('unlock-submit-btn');
+  const feedbackMsg = document.getElementById('password-feedback-msg');
+
+  const lockAudio = createSynthesizedLockAudio();
 
   let hasAutoTriggered = false;
   let fireworksStopFn = null;
-  let forceUnlock = false; // LOCKED until 10:30 PM! Opens automatically at 10:30 PM sharp
+  let forceUnlock = false;
+  let isUnlockingAnimation = false;
 
   // Render Fairy-Light Polaroids
   if (polaroidGrid && Array.isArray(bornConfig.polaroids)) {
@@ -1455,70 +1801,154 @@ function initBornTimeCelebration(bornConfig, audioManager) {
     return false;
   }
 
-  // Open & Close Locked Suspense Modal
+  // Open & Close Locked Password Modal
   function openLockedModal() {
     if (!lockedModal) return;
     lockedModal.classList.add('active');
     lockedModal.setAttribute('aria-hidden', 'false');
-    updateCountdown();
+
+    // Reset padlock animation classes
+    if (padlockAssembly) {
+      padlockAssembly.className = 'padlock-assembly';
+    }
+    if (feedbackMsg) {
+      feedbackMsg.className = 'password-feedback-msg';
+      feedbackMsg.textContent = '';
+    }
+    if (unlockSubmitBtn) {
+      unlockSubmitBtn.disabled = false;
+      const btnText = unlockSubmitBtn.querySelector('.btn-text');
+      if (btnText) btnText.textContent = 'Unlock My Secret Surprise';
+    }
+    if (passwordInput) {
+      passwordInput.disabled = false;
+      passwordInput.value = '';
+      setTimeout(() => passwordInput.focus(), 300);
+    }
+    isUnlockingAnimation = false;
   }
 
   function closeLockedModal() {
     if (!lockedModal) return;
     lockedModal.classList.remove('active');
     lockedModal.setAttribute('aria-hidden', 'true');
+    isUnlockingAnimation = false;
   }
 
-  // Countdown Calculation Engine
-  function updateCountdown() {
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentMinute = now.getMinutes();
+  // Password Input & Eye Toggle Handler
+  if (togglePwdBtn && passwordInput) {
+    togglePwdBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isPwd = passwordInput.type === 'password';
+      passwordInput.type = isPwd ? 'text' : 'password';
+      const eyeIcon = document.getElementById('pwd-eye-icon');
+      if (eyeIcon) eyeIcon.textContent = isPwd ? '🙈' : '👁️';
+    });
+  }
 
-    // Check if vault is unlocked right now
-    if (isUnlocked()) {
-      if (!hasAutoTriggered && (currentHour === targetHour && currentMinute >= targetMinute && currentMinute < targetMinute + 5)) {
-        hasAutoTriggered = true;
+  // Password Verification & Golden Key Locker Animation Engine
+  function handlePasswordSubmit(e) {
+    if (e) e.preventDefault();
+    if (isUnlockingAnimation) return;
+    if (!passwordInput) return;
+
+    const val = passwordInput.value.trim();
+
+    // Verification check: exact "Sh@lini@28" or case-tolerant "sh@lini@28"
+    if (val === EXPECTED_PASSWORD || val.toLowerCase() === EXPECTED_PASSWORD.toLowerCase()) {
+      // SUCCESS!
+      isUnlockingAnimation = true;
+      if (feedbackMsg) {
+        feedbackMsg.className = 'password-feedback-msg success';
+        feedbackMsg.textContent = "✨ Password Correct! Golden Key Unlocking Ammu's Heart... 🗝️💖";
+      }
+      passwordInput.disabled = true;
+      if (unlockSubmitBtn) {
+        unlockSubmitBtn.disabled = true;
+        const btnText = unlockSubmitBtn.querySelector('.btn-text');
+        if (btnText) btnText.textContent = "Unlocking Ammu's Vault...";
+      }
+
+      // Visual Animation Steps: Key Glides -> Key Inserts -> Key Turns 90deg -> Shackle Pops Open
+      if (padlockAssembly) {
+        // Step 1: Key glides in towards keyhole
+        padlockAssembly.className = 'padlock-assembly key-gliding';
+        lockAudio.playKeyChime();
+
+        // Step 2: Key inserts into keyhole
+        setTimeout(() => {
+          padlockAssembly.className = 'padlock-assembly key-inserted';
+          lockAudio.playKeyTurnSound();
+        }, 550);
+
+        // Step 3: Key turns 90 degrees with golden radiance
+        setTimeout(() => {
+          padlockAssembly.className = 'padlock-assembly key-turned';
+          lockAudio.playKeyTurnSound();
+        }, 950);
+
+        // Step 4: Shackle pops open and swings!
+        setTimeout(() => {
+          padlockAssembly.className = 'padlock-assembly unlocked';
+          lockAudio.playUnlockFanfare();
+          if (typeof triggerRomanticConfetti === 'function') triggerRomanticConfetti();
+          if (feedbackMsg) {
+            feedbackMsg.textContent = "🔓 UNLOCKED! Welcome to Ammu's Secret Vault! 💖✨";
+          }
+        }, 1300);
+
+        // Step 5: Transition into the Secret Surprise Vault
+        setTimeout(() => {
+          forceUnlock = true;
+          closeLockedModal();
+          launchCelebration();
+          showRomanticToast("Welcome Ammu! Stephen's Secret Vault Unlocked! 💖✨", "🔓");
+        }, 2400);
+      } else {
+        forceUnlock = true;
         closeLockedModal();
         launchCelebration();
       }
-      if (tickerEl) {
-        tickerEl.innerHTML = '✨ It\'s Ammu\'s Golden Hour! 💖';
+    } else {
+      // INCORRECT PASSWORD: Shake animation and sweet husband prompt
+      if (padlockAssembly) {
+        padlockAssembly.classList.remove('shake');
+        void padlockAssembly.offsetWidth; // Force CSS reflow to re-trigger shake
+        padlockAssembly.classList.add('shake');
+        setTimeout(() => {
+          if (padlockAssembly) padlockAssembly.classList.remove('shake');
+        }, 650);
       }
-      if (lockedCountdownDisplay) {
-        lockedCountdownDisplay.textContent = '00h : 00m : 00s (UNLOCKED! ✨)';
+      if (feedbackMsg) {
+        feedbackMsg.className = 'password-feedback-msg error';
+        feedbackMsg.textContent = '🥺 Ayyoo thappana password ammu! Unga purushan Stephen kitta password kelunga ❤️';
+      }
+      showRomanticToast("Password wrong ammu! Stephen kitta kelunga ❤️", "🔒");
+    }
+  }
+
+  if (vaultPasswordForm) {
+    vaultPasswordForm.addEventListener('submit', handlePasswordSubmit);
+  }
+
+  // Countdown Calculation Engine (Displays Status)
+  function updateCountdown() {
+    // Check if vault is unlocked
+    if (isUnlocked()) {
+      if (!hasAutoTriggered) {
+        hasAutoTriggered = true;
+      }
+      if (tickerEl) {
+        tickerEl.innerHTML = '✨ Ammu\'s Vault Unlocked! 💖';
       }
       if (triggerBtnIcon) triggerBtnIcon.textContent = '🔓';
-      if (triggerBtnText) triggerBtnText.textContent = 'Secret Surprise Unlocked!';
+      if (triggerBtnText) triggerBtnText.textContent = 'Open Secret Surprise';
       return;
     }
 
-    // Locked state (< 22:30)
-    if (triggerBtnIcon) triggerBtnIcon.textContent = '🔒';
-    if (triggerBtnText) triggerBtnText.textContent = 'Secret Surprise (10:30 PM)';
-
-    // Target is today at 22:30:00
-    let targetDate = new Date();
-    targetDate.setHours(targetHour, targetMinute, 0, 0);
-
-    // If past target today, roll to tomorrow
-    if (now > targetDate) {
-      targetDate.setDate(targetDate.getDate() + 1);
-    }
-
-    const diffMs = targetDate - now;
-    const diffSecs = Math.max(0, Math.floor(diffMs / 1000));
-
-    const hrs = Math.floor(diffSecs / 3600);
-    const mins = Math.floor((diffSecs % 3600) / 60);
-    const secs = diffSecs % 60;
-
-    const pad = (n) => String(n).padStart(2, '0');
-    const tickerStr = hrs > 0 ? `${pad(hrs)}h : ${pad(mins)}m : ${pad(secs)}s` : `${pad(mins)}m : ${pad(secs)}s`;
-    const lockedStr = `${pad(hrs)}h : ${pad(mins)}m : ${pad(secs)}s`;
-
-    if (tickerEl) tickerEl.textContent = tickerStr;
-    if (lockedCountdownDisplay) lockedCountdownDisplay.textContent = lockedStr;
+    if (tickerEl) tickerEl.textContent = 'Stephen-oda Secret Lock 🔐';
+    if (triggerBtnIcon) triggerBtnIcon.textContent = '🔐';
+    if (triggerBtnText) triggerBtnText.textContent = 'Unlock Secret Surprise';
   }
 
   updateCountdown();
@@ -1565,46 +1995,27 @@ function initBornTimeCelebration(bornConfig, audioManager) {
     }
   }
 
-  // Handle trigger button click (Locked vs Unlocked + Secret Testing Bypass)
-  let testTapCount = 0;
-  let testTapTimer = null;
+  // Handle Opening the Secret Vault from Screen 1 or Screen 7
+  const handleOpenSecretVault = (e) => {
+    if (e) e.preventDefault();
+    if (forceUnlock) {
+      launchCelebration();
+    } else {
+      openLockedModal();
+    }
+  };
 
   if (triggerBtn) {
-    triggerBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      // Secret Developer / Husband testing bypass: 3 quick clicks opens instantly anytime
-      testTapCount++;
-      if (testTapTimer) clearTimeout(testTapTimer);
-      testTapTimer = setTimeout(() => { testTapCount = 0; }, 1400);
-
-      if (testTapCount >= 3) {
-        forceUnlock = true;
-        showRomanticToast("Testing mode unlocked! Opening Vault... 💖", "🔓");
-        closeLockedModal();
-        launchCelebration();
-        return;
-      }
-
-      if (isUnlocked()) {
-        closeLockedModal();
-        launchCelebration();
-      } else {
-        openLockedModal();
-        showRomanticToast("10:30 PM varaikum porumaiyaa wait pannunga ammu! ❤️", "🔒");
-      }
-    });
+    triggerBtn.addEventListener('click', handleOpenSecretVault);
   }
 
-  // Locked Modal Close Handlers
+  if (finaleSecretBtn) {
+    finaleSecretBtn.addEventListener('click', handleOpenSecretVault);
+  }
+
+  // Modal Close Handlers
   if (lockedCloseBtn) lockedCloseBtn.addEventListener('click', closeLockedModal);
   if (lockedBackdrop) lockedBackdrop.addEventListener('click', closeLockedModal);
-  if (lockedAgreeBtn) {
-    lockedAgreeBtn.addEventListener('click', () => {
-      closeLockedModal();
-      showRomanticToast("Love you ammu! 10:30 PM ku namma surprise open aagidum! 💖", "🥰");
-    });
-  }
 
   // Celebration Vault Close Handlers
   if (closeBtn) closeBtn.addEventListener('click', closeCelebration);
